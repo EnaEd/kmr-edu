@@ -1,3 +1,11 @@
 import { Routes } from '@angular/router';
+import {AboutComponent} from './about-group/about/about/about.component';
+import {HomeComponent} from './home/home.component';
+import {PhotoGalleryComponent} from './photo-gallery/photo-gallery.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: 'about', component: AboutComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'photo-gallery', component: PhotoGalleryComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+];
