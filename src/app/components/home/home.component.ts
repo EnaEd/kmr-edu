@@ -1,17 +1,24 @@
-import { Component } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
+import {EventStore} from '../../infrastructure/states/events/event-store';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [
     RouterOutlet
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-  constructor(private router:Router) {
+export class HomeComponent implements OnInit {
+  readonly eventStore = inject(EventStore)
+
+  constructor(private router: Router) {
+  }
+
+  ngOnInit(): void {
+    this.eventStore.loadEvents();
+
   }
 
   AboutClick() {

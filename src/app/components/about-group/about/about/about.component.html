@@ -1,0 +1,10 @@
+<p>about works!</p>
+<button (click)="homeClick()">Home</button>
+
+<div>Staff
+  @for (unit of staffStore.staff().data; track unit.id) {
+    <div>{{ unit.id }}</div>
+    <div>{{ unit.name }}</div>
+    <div>{{ unit.position }}</div>
+  }
+</div>

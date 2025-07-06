@@ -1,0 +1,20 @@
+<div>
+  <p>home works!</p>
+  <button (click)='AboutClick()'>About</button>
+  <button (click)='PhotoGalleryClick()'>Photo Gallery</button>
+</div>
+
+
+
+<div>Events
+  @for (unit of eventStore.events().data; track unit.id) {
+    <div>id;{{ unit.id }}</div>
+    <div>name:{{ unit.name }}</div>
+    <div>desc:{{ unit.description }}</div>
+    <div>thumb:{{ unit.thumbImage }}</div>
+    <div>data:{{ unit.date }}</div>
+    <div>location:{{ unit.location }}</div>
+  }
+</div>
+
+<router-outlet/>
