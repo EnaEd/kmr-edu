@@ -32,7 +32,7 @@ export class StaffService {
       image: lastDoc.data()['image'],
       position: lastDoc.data()['position']
     };
-    return {
+    return { //TODO EE: place for return hard data during test
       data,
       lastItem,
       page: 0,
