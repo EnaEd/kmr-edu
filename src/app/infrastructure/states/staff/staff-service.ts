@@ -16,6 +16,7 @@ export class StaffService {
   }
 
   async getStaffPage(): Promise<PagedResponse<Staff>> {
+    //TODO EE: improve request for getting paged data
     const ref = collection(this.firestore, 'staff');
     const q = query(ref, orderBy('name'), limit(3));
     const snapshot = await getDocs(q);
