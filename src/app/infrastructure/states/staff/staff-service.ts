@@ -16,7 +16,7 @@ export class StaffService {
   }
 
   async getStaffPage(): Promise<PagedResponse<Staff>> {
-    const ref = collection(this.firestore, 'schools');
+    const ref = collection(this.firestore, 'staff');
     const q = query(ref, orderBy('name'), limit(3));
     const snapshot = await getDocs(q);
     const data = snapshot.docs.map(doc => ({
