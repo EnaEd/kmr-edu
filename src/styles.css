@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* ============================== */
+/* Global styles */
+/* ============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family-base: 'Arial', sans-serif;
+  --main-background-color: #f5f5f5;
+
+  --mob-container: 100%;
+  --tablet-container: 768px;
+  --desktop-container: 1280px;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background: var(--main-background-color);
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  width: 100%;
+  max-width: var(--mob-container);
+  min-width: 0;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  main {
+    max-width: var(--tablet-container);
+    padding: 0 32px;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+  main {
+    max-width: var(--desktop-container);
+    padding: 0 24px;
+  }
+}
