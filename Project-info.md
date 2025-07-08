@@ -9,6 +9,6 @@ An informational project about the educational institution "Komarovo Gymnasium"
 - Gallery
 
 ## Tech Stack
-- Angular 18
+- Angular 19
 - Firebase Database
 - Google Cloud Storage (blob storage)
