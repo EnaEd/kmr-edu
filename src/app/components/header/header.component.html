@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="header-left">
+    <img src="favicon.png" alt="Logo" class="logo" />
+    <span class="school-name">
+      КЗ "Комарівська гімназія з дошкільним підрозділом" Вороновицької селищної
+      ради
+    </span>
+  </div>
+
+  <nav class="nav">
+    <a
+      routerLink="/home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Головна</a
+    >
+    <a routerLink="/about" routerLinkActive="active">Про нас</a>
+    <a routerLink="/photo-gallery" routerLinkActive="active">Фотогалерея</a>
+  </nav>
+</header>

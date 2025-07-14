@@ -1,0 +1,56 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow-md);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.school-name {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
+  max-width: 600px;
+}
+
+.nav {
+  font-family: var(--font-family-base);
+  display: flex;
+  gap: var(--gap-md);
+  font-size: var(--font-size-base);
+}
+
+.nav a {
+  color: var(--text-color);
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: var(--accent-color);
+}
+
+.nav a.active {
+  color: var(--accent-color);
+  font-weight: var(--font-weight-medium);
+}
